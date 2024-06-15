@@ -74,11 +74,15 @@ for(i=0;i<soapProduct.length;i++){
     
     let card = document.createElement("div")
     card.style.width = "300px"
-    card.className ='border border-3 border-secondary-subtle m-1 mb-4 p-3 rounded justify-content-center align-items-center'
+    card.style.height =
+    card.className ='border border-bottom-2 border-start-2 border-end-2 m-5 mb-4 p-0'
 
     let cardImage = document.createElement('img')
     cardImage.src = `/assets/pictures/productPicture/${soapProduct[i].picture}`
     cardImage.className = 'col card-img-top'
+
+    let cardBody = document.createElement('div')
+    cardBody.className = 'd-flex justify-content-center'
 
     let cardTitle = document.createElement("h4")
     cardTitle.className ="col card-title fw-bold fs-4 "
@@ -88,14 +92,16 @@ for(i=0;i<soapProduct.length;i++){
     cardPrice.className ="card-text display-5"
 
     let cardButton = document.createElement('button')
-    cardButton.className ='btn btn-outline-success'
+    cardButton.className ='btn'
     let cardA = document.createElement('a')
     cardA.innerHTML = 'See details'
+    cardA.className ='fw-semibold text-success '
 
     productList.appendChild(card)
     card.appendChild(cardImage)
-    card.appendChild(cardTitle)
-    card.appendChild(cardPrice)
-    card.appendChild(cardButton)
+    card.appendChild(cardBody)
+    cardBody.appendChild(cardTitle)
+    cardBody.appendChild(cardPrice)
+    cardBody.appendChild(cardButton)
     cardButton.appendChild(cardA)
 }
