@@ -170,7 +170,7 @@ nav ul a {
 /* CONTENT HOME  */
 .home {
   /* width: 100%; */
-  height:1000;
+  height:2000px;
   flex-shrink: 0;
   margin-bottom: 100;
 }
@@ -182,48 +182,38 @@ nav ul a {
   color:white;
 }
 .home img{
-  width: 527px;
-  height: 527px;
+  width: 500px;
+  height: 500px;
   flex-shrink: 0;
   float:left;
   margin-left: 80;
   margin-top:30;
   margin-bottom:100;
 }
-.home #summerBg{
+.home #specialBg{
   width:100% ;
+  height: 595px;
   margin: 0;
 }
 
 .home h1 {
   color: #000;
   font-family: Garamond,serif;
-  font-size: 96px;
   font-style: normal;
-  font-weight: 500;
   line-height: normal;
-  margin-top:40;
-  margin-left: 80;
 }
 .home h2 {
   color: #000;
   font-family: Garamond,serif;
-  font-size: 80px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
-  margin-left:700;
 }
 .home p {
-  color: #000;
-  font-family: Garmond,serif;
-  font-size: 36px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
-  margin-left:700;
-  width: 1080;
-  letter-spacing: 4;
+  width: 90%;
+  letter-spacing: 3.5;
 }
 /* FOOTER */
 

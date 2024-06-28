@@ -22,6 +22,58 @@ const CollectionsProduct = [
 
 
 let Collection = document.getElementById('CollectionsContainer')
-let summerBg = document.getElementById('summerBg')
 
-let summerTitle = document.createElement
+// SPECIAL SEASON 
+let specialSection = document.getElementById("specialSection")
+
+let specialImg = document.createElement('img')
+specialImg.className = 'ms-5 m-5'
+specialImg.src = `assets/pictures/productPicture/${CollectionsProduct[0].picture}`
+
+let specialTitle = document.createElement('h1')
+specialTitle.className = 'display-1 fw-semibold m-5'
+specialTitle.innerHTML = CollectionsProduct[0].title
+
+let specialProduct = document.createElement('h2')
+specialProduct.className = 'display-3 fw-medium '
+specialProduct.innerHTML = CollectionsProduct[0].product
+
+let specialDesc = document.createElement('p')
+specialDesc.className = 'fs-3 text-dark-subtle'
+specialDesc.innerHTML = CollectionsProduct[0].desc
+
+specialSection.appendChild(specialImg)
+specialSection.appendChild(specialTitle)
+specialSection.appendChild(specialProduct)
+specialSection.appendChild(specialDesc)
+
+
+// SEASON COLLECTIONS
+
+for(let i = 1;i<CollectionsProduct.length;i++){
+    let image = document.createElement('img')
+    image.className = 'm-5'
+    image.src = `assets/pictures/productPicture/${CollectionsProduct[i].picture}`
+
+    let title = document.createElement('h1')
+    title.className = 'display-1 fw-semibold m-5 pt-5'
+    title.innerHTML =CollectionsProduct[i].title
+
+    let product = document.createElement('h2')
+    product.className = 'display-3 fw-medium '
+    product.innerHTML = CollectionsProduct[i].product
+
+    let desc = document.createElement('p')
+    desc.className = 'fs-3 text-dark-subtle'
+    desc.innerHTML = CollectionsProduct[i].desc
+    
+    let divAdd = document.createElement('div')
+    divAdd.style.height = '200px'
+
+    Collection.appendChild(image)
+    Collection.appendChild(title)
+    Collection.appendChild(product)
+    Collection.appendChild(desc)
+    Collection.appendChild(divAdd)
+
+}
