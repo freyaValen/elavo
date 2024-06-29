@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Elavo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <header>
+      <div id="navbarContainer"></div>
+    </header>
+
+    <!-- CONTENT -->
+     <!-- dibuat list, ambil dr local storage, trs nanti kalo ktm yg namanya sm quantity nya tambahin, trus ada checkbox juga -->
+     <!-- kalo di ceklis nanti hargnya dikali jumlah -->
+     <!-- ada + - ?? jgn lupa tambahin toast pas added to cart--> 
+
+     <ul class="list-group list-group-flush">
+        <li class="list-group-item row align-items-center">
+            <input class="form-check-input col-1" type="checkbox" value="" id="firstCheckbox">
+            <img src="assets/pictures/productPicture/summer.png" alt="" class="col-2">
+            <label class="form-check-label col-2 fs-3 align-self-center" for="firstCheckbox">First checkbox</label>
+            <div class="btn-group col-2 position-absolute end-0" role="group">
+                <button type="button" class="border border-secondary">-</button>
+                <button type="button" class="border border-secondary">12</button>
+                <button type="button" class="border border-secondary">+</button>
+            </div>
+        </li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+      </ul>
+
+
+
+
+    <!-- FOOTER -->
+    <div id="footerContainer"></div>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="home.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

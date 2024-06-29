@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Elavo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   </head>
@@ -79,6 +80,7 @@
 <!-- CONTENT -->
     <div class="home" id="home">
     <b><h1 class="featured m-0 p-5">Featured Collections</h1></b>
+    
 
       <div id="specialContainer" class="">
         <div class="position-absolute" id="specialSection">
@@ -89,34 +91,22 @@
       <div id="CollectionsContainer"></div>
       </div>
 
-      <!-- <h1>Fall Collection</h1>
-      <img src="assets/pictures/productPicture/autumn.png">
-      <h2>Autumn Soap</h2>
-      <p>Autumn Soap is  perfect to rejuvenates, brightens, and soothing your skin. Aroma warm, spicy, and slightly sweet, formulated with cardamom, amber, balsam fir, and natural coloring. </p>
-    </div>
-    
-    <div class="home">
-      <h1>Winter Collection</h1> 
-      <img src="assets/pictures/productPicture/winter.png">
-      <h2>Winter Soap</h2>
-      <p>Winter soap repairs free radical damage and reduce acne bumps. Formulated with lavender, musk, woods, and vanilla to creates powdery, sweet, woody, and floral scents.</p>
-    </div> -->
-
-
 <!-- MODAL -->
  <div class="modal" id="soapModal">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered modal-lg ">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="modalTitle"></h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h4 class="modal-title" id="modalTitle">a</h4>
       </div>
-      <div class="modal-body">
-        <p id="modal-text"></p>
+      <div class="modal-body d-inline-flex justify-content-between">
+        <img src="" alt="" id="modal-image" class="m-2 border border-secondary border-3">
+        <p id="modal-text" class="mx-4 mt-2">a</p>
+        <!-- <p class="text-secondary">Rp 58.000</p> -->
       </div>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success-subtle">Add to cart</button>
+        <button type="button" class="btn btn-success" id="addCart">Add to cart</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeModal">Close</button>
       </div>
 
     </div>

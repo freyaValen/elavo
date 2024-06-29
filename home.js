@@ -22,12 +22,19 @@ const CollectionsProduct = [
 
 
 let Collection = document.getElementById('CollectionsContainer')
+let soapModal = document.getElementById('soapModal')
+let closeModal = document.getElementById('closeModal')
+let modalTitle = document.getElementById('modalTitle')
+let modalImage = document.getElementById('modal-image')
+let modalText = document.getElementById('modal-text')
+let selectedProduct = ''
+
 
 // SPECIAL SEASON 
 let specialSection = document.getElementById("specialSection")
 
 let specialImg = document.createElement('img')
-specialImg.className = 'ms-5 m-5'
+specialImg.className = 'm-5'
 specialImg.src = `assets/pictures/productPicture/${CollectionsProduct[0].picture}`
 
 let specialTitle = document.createElement('h1')
@@ -46,6 +53,27 @@ specialSection.appendChild(specialImg)
 specialSection.appendChild(specialTitle)
 specialSection.appendChild(specialProduct)
 specialSection.appendChild(specialDesc)
+
+specialImg.onclick = function(){
+    soapModal.style.display = 'block'
+    modalTitle.innerHTML = CollectionsProduct[0].product
+    modalImage.src = `assets/pictures/productPicture/${CollectionsProduct[0].picture}`
+    modalImage.style.width = '300px'
+    modalText.innerHTML =  `${CollectionsProduct[0].desc} <br> <br> Rp ${58000}`
+    selectedProduct = CollectionsProduct[0].product
+}
+
+closeModal.onclick =function(){
+    soapModal.style.display='none'
+}
+
+window.onclick = function(event) {
+    if (event.target == soapModal) {
+      soapModal.style.display = "none";
+    }
+}
+
+
 
 
 // SEASON COLLECTIONS
@@ -68,7 +96,8 @@ for(let i = 1;i<CollectionsProduct.length;i++){
     desc.innerHTML = CollectionsProduct[i].desc
     
     let divAdd = document.createElement('div')
-    divAdd.style.height = '200px'
+    divAdd.style.height = '130px'
+    divAdd.style.marginBottom ='80px'
 
     Collection.appendChild(image)
     Collection.appendChild(title)
@@ -76,4 +105,33 @@ for(let i = 1;i<CollectionsProduct.length;i++){
     Collection.appendChild(desc)
     Collection.appendChild(divAdd)
 
+    image.onclick = function(){
+        soapModal.style.display = 'block'
+        modalTitle.innerHTML = CollectionsProduct[i].product
+        modalImage.src = `assets/pictures/productPicture/${CollectionsProduct[i].picture}`
+        modalText.innerHTML =  `${CollectionsProduct[i].desc} <br> <br> Rp ${58000}`
+        selectedProduct = CollectionsProduct[i].product
+        }
+
+    closeModal.onclick =function(){
+        soapModal.style.display='none'
+    }
+
+    window.onclick = function(event) {
+        if (event.target == soapModal) {
+          soapModal.style.display = "none";
+        }
+      }
+}
+
+let addCart = document.getElementById('addCart')
+addCart.addEventListener('click',AddToCart)
+
+function AddToCart(){
+    saveProduct(selectedProduct)
+    soapModal.style.display = 'none'
+}
+
+function saveProduct(value){
+    localStorage.setItem(`product${localStorage.length}`,value)
 }
