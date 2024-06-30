@@ -27,17 +27,17 @@ function loadComponent(id,comp){
 const soapProduct = [
     {
         picture : 'winter.png',
-        title : 'Winter Soap',
+        title : 'Snowflakes Soap',
         price : `Rp${58000}`,
     },
     {
         picture : 'summer.png',
-        title : 'Summer Soap',
+        title : 'Watermelon Soap',
         price : `Rp${58000}`,
     },
     {
         picture : 'autumn.png',
-        title : 'Autumn Soap',
+        title : 'Golden Hour Soap',
         price : `Rp${58000}`,
     },
     {
