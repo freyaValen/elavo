@@ -74,28 +74,22 @@ for(i=0;i<localStorage.length;i++){
         }
     
     
-    if(addedProduct.includes(theProduct)){
-        console.log(soapList[checkIndex(theProduct)].num + theProduct)
-    soapList[checkIndex(theProduct)].num += 1
-    console.log(soapList[checkIndex(theProduct)].num + 'THAT'+theProduct)
-    eachQuantity = soapList[checkIndex(theProduct)].num
-    if(document.getElementById(`quantity${theProduct}`)){
-        let curList = document.getElementById(`ListItem${theProduct}`)
-        // curList.remove()
-        let curQuantity = document.getElementById(`quantity${theProduct}`)
-        curQuantity.innerHTML = eachQuantity
-    }
-    }
-    else{
-        addListItem()
-    }
-    
+
     addListItem() 
     function addListItem(){
+    if(addedProduct.includes(theProduct)){
+        soapList[checkIndex(theProduct)].num += 1
+        eachQuantity = soapList[checkIndex(theProduct)].num
+        if(document.getElementById(`quantity${theProduct}`)){
+        let curQuantity = document.getElementById(`quantity${theProduct}`)
+        curQuantity.innerHTML = eachQuantity
+        let curList = document.getElementById(`ListItem${theProduct}`)
+        cartList.removeChild(curList)
+        }
+        }
     let ListItem = document.createElement('li')
     ListItem.className = 'list-group-item row d-flex align-items-center'
     ListItem.id = `ListItem${theProduct}`
-    
     let checkBox = document.createElement('input')
     checkBox.className = 'form-check-input display-5 mx-4 border border-secondary border-2'
     checkBox.type = 'checkbox'
@@ -136,6 +130,4 @@ for(i=0;i<localStorage.length;i++){
     btnGroup.appendChild(quantity)
     btnGroup.appendChild(plus)
     }
-
 }
-console.log(addedProduct)
